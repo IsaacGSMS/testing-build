@@ -6,14 +6,13 @@ dependencies:
   pre:
     - rm -rf ./node_modules
   override:
-    - nvm install 6 && npm install
+    - nvm install
   cache_directories:
     - ~/.npm
 
 test:
   override:
-    - nvm use 4 && npm run test-server-all
-    - nvm use 6 && npm run ci
+    - npm test
 
 deployment:
     master:
