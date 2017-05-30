@@ -1,0 +1,22 @@
+machine:
+    node:
+      version: 6.3.0
+
+dependencies:
+  pre:
+    - rm -rf ./node_modules
+  override:
+    - nvm install 6 && npm install
+  cache_directories:
+    - ~/.npm
+
+test:
+  override:
+    - nvm use 4 && npm run test-server-all
+    - nvm use 6 && npm run ci
+
+deployment:
+    master:
+        branch: master
+        heroku:
+            appname: testing-build
