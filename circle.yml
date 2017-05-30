@@ -7,12 +7,13 @@ dependencies:
     - rm -rf ./node_modules
   override:
     - npm install
+    - npm run vscode:prepublish
   cache_directories:
     - ~/.npm
 
 test:
   override:
-    - npm test
+    - npm test --silent
 
 deployment:
     master:
