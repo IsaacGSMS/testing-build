@@ -17,5 +17,3 @@ test:
 deployment:
     master:
         branch: master
-        heroku:
-            appname: testing-build
