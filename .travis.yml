@@ -1,7 +1,7 @@
 language: node_js
-sudo: true
+sudo: false
 node_js:
-  - "6.3"
+  - "6"
 before_install:
   - rm -rf ./node_modules
 install:
